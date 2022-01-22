@@ -39,29 +39,101 @@ class _ProfileState extends State<Profile> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CircleAvatar(
-                    maxRadius: MediaQuery.of(context).size.height / 20,
+                  Container(
+                    height: MediaQuery.of(context).size.height / 5.5,
+                    child: CircleAvatar(
+                      maxRadius: MediaQuery.of(context).size.height / 20,
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text("Name"),
-                      Text("data"),
-                    ],
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 20, right: 20, bottom: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Name",
+                          style: TextStyle(color: Colors.grey, fontSize: 16),
+                        ),
+                        Spacer(),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 1.6,
+                          height: 40,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Nanefhghg",
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              Divider(),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text("Gender"),
-                      Text("data"),
-                    ],
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 20, right: 20, bottom: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Gender",
+                          style: TextStyle(color: Colors.grey, fontSize: 16),
+                        ),
+                        Spacer(),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 1.6,
+                          height: 40,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Nanefhghg",
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              Divider(),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text("Birthday"),
-                      Text("data"),
-                    ],
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 20, right: 20, bottom: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Birthday",
+                          style: TextStyle(color: Colors.grey, fontSize: 16),
+                        ),
+                        Spacer(),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 1.6,
+                          height: 40,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Nanefhghg",
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              Divider(),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

@@ -23,7 +23,7 @@ class _HomepageState extends State<Homepage> {
             child: Container(
               color: Colors.white,
               height: 500,
-              width: 500,
+              width: MediaQuery.of(context).size.width,
             ),
           ),
         ),
