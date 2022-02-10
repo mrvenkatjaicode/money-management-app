@@ -2,7 +2,7 @@ import 'screens/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -18,10 +18,21 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: Colors.white,
-          scaffoldBackgroundColor: Colors.blueGrey[50],
-          accentColor: Colors.yellowAccent[700],
-        ),
-        home: Homepage());
+            textTheme: Theme.of(context).textTheme.apply(
+                  bodyColor: Colors.yellow,
+                  displayColor: Colors.red,
+                ),
+            primaryIconTheme: const IconThemeData(color: Colors.black),
+            appBarTheme: const AppBarTheme(
+                foregroundColor: Colors.black,
+                // ignore: deprecated_member_use
+                backgroundColor: Colors.white,
+                iconTheme: IconThemeData(color: Colors.black)),
+            // primaryTextTheme: TextTheme(titleMedium: ) Colors.black,
+            // primaryColor: Colors.white,
+            scaffoldBackgroundColor: Colors.blueGrey[50],
+            colorScheme: ColorScheme.fromSwatch()
+                .copyWith(secondary: const Color.fromARGB(255, 255, 213, 0))),
+        home: const Homepage());
   }
 }

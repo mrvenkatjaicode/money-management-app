@@ -1,4 +1,4 @@
-# code
+# sample
 
 A new Flutter project.
 

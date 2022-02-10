@@ -16,15 +16,15 @@ class _ChartState extends State<Chart> {
         title: GestureDetector(
           onTap: () {},
           child: Row(
-            children: [Text("Jan"), Icon(Icons.arrow_drop_down)],
+            children: const [Text("Jan"), Icon(Icons.arrow_drop_down)],
           ),
         ),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Homepage()),
+              MaterialPageRoute(builder: (context) => const Homepage()),
             );
           },
         ),

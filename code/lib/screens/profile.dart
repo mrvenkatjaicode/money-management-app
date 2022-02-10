@@ -15,22 +15,22 @@ class _ProfileState extends State<Profile> {
   final namecontroller = TextEditingController();
   dynamic val = "Male";
 
-  BestTutorSite _site = BestTutorSite.others;
+  // BestTutorSite _site = BestTutorSite.others;
   dynamic n;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 1,
-        title: Text("Profile"),
+        title: const Text("Profile"),
         actions: [
           PopupMenuButton(
               itemBuilder: (context) => [
                     PopupMenuItem(
                       height: 30,
-                      child: Container(
+                      child: SizedBox(
                         width: MediaQuery.of(context).size.width / 3.2,
-                        child: Text("Sign Out"),
+                        child: const Text("Sign Out"),
                       ),
                       value: 1,
                     ),
@@ -39,7 +39,7 @@ class _ProfileState extends State<Profile> {
       ),
       body: Column(
         children: [
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Card(
             child: Container(
               color: Colors.white,
@@ -48,7 +48,7 @@ class _ProfileState extends State<Profile> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
+                  SizedBox(
                     height: MediaQuery.of(context).size.height / 5.5,
                     child: CircleAvatar(
                       maxRadius: MediaQuery.of(context).size.height / 20,
@@ -61,16 +61,16 @@ class _ProfileState extends State<Profile> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Name",
                           style: TextStyle(color: Colors.grey, fontSize: 16),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         GestureDetector(
                           onTap: () {
                             updateName(context);
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: MediaQuery.of(context).size.width / 1.6,
                             height: 40,
                             child: Column(
@@ -78,10 +78,10 @@ class _ProfileState extends State<Profile> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "$name",
-                                  style: TextStyle(fontSize: 16),
+                                  name,
+                                  style: const TextStyle(fontSize: 16),
                                 ),
-                                Divider(),
+                                const Divider(),
                               ],
                             ),
                           ),
@@ -96,16 +96,16 @@ class _ProfileState extends State<Profile> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Gender",
                           style: TextStyle(color: Colors.grey, fontSize: 16),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         GestureDetector(
                           onTap: () {
                             updategender(context);
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: MediaQuery.of(context).size.width / 1.6,
                             height: 40,
                             child: Column(
@@ -114,9 +114,9 @@ class _ProfileState extends State<Profile> {
                               children: [
                                 Text(
                                   "$val",
-                                  style: TextStyle(fontSize: 16),
+                                  style: const TextStyle(fontSize: 16),
                                 ),
-                                Divider(),
+                                const Divider(),
                               ],
                             ),
                           ),
@@ -131,22 +131,22 @@ class _ProfileState extends State<Profile> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Birthday",
                           style: TextStyle(color: Colors.grey, fontSize: 16),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         GestureDetector(
                           onTap: () {
                             updateBirthday(context);
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: MediaQuery.of(context).size.width / 1.6,
                             height: 40,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: const [
                                 Text(
                                   "Nanefhghg",
                                   style: TextStyle(fontSize: 16),
@@ -196,16 +196,16 @@ class _ProfileState extends State<Profile> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Choose your gender"),
+            title: const Text("Choose your gender"),
             content: StatefulBuilder(
                 builder: (BuildContext context, StateSetter setState) {
-              return Container(
+              return SizedBox(
                 height: MediaQuery.of(context).size.height / 5,
                 width: MediaQuery.of(context).size.width / 1.5,
                 child: Column(
                   children: [
                     ListTile(
-                      title: Text("Male"),
+                      title: const Text("Male"),
                       leading: Radio(
                         value: 1,
                         groupValue: val,
@@ -217,7 +217,7 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),
                     ListTile(
-                      title: Text("Female"),
+                      title: const Text("Female"),
                       leading: Radio(
                         value: 2,
                         groupValue: val,
@@ -229,7 +229,7 @@ class _ProfileState extends State<Profile> {
                       ),
                     ),
                     ListTile(
-                      title: Text("Others"),
+                      title: const Text("Others"),
                       leading: Radio(
                         value: 3,
                         groupValue: val,
@@ -253,26 +253,26 @@ class _ProfileState extends State<Profile> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Enter your name"),
-            content: Container(
+            title: const Text("Enter your name"),
+            content: SizedBox(
               height: MediaQuery.of(context).size.height / 15,
               width: MediaQuery.of(context).size.width / 1.5,
               child: Column(
                 children: [
                   TextField(
                     controller: namecontroller,
-                    decoration: new InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Enter your name',
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.amber),
                         // borderRadius: new BorderRadius.circular(25.7),
                       ),
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: new BorderSide(color: Colors.amber),
+                        borderSide: BorderSide(color: Colors.amber),
                         // borderRadius: new BorderRadius.circular(25.7),
                       ),
                       disabledBorder: UnderlineInputBorder(
-                        borderSide: new BorderSide(color: Colors.amber),
+                        borderSide: BorderSide(color: Colors.amber),
                         // borderRadius: new BorderRadius.circular(25.7),
                       ),
                     ),
@@ -308,11 +308,11 @@ class _ProfileState extends State<Profile> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Choose birthday"),
-            content: Container(
+            title: const Text("Choose birthday"),
+            content: SizedBox(
               height: MediaQuery.of(context).size.height / 5,
               child: Column(
-                children: [
+                children: const [
                   // DateTimeField(
                   //   // controller: datetimecontroller,
                   //   format: format,

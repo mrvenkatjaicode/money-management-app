@@ -34,7 +34,7 @@ class _MenuState extends State<Menu> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Profile()),
+                      MaterialPageRoute(builder: (context) => const Profile()),
                     );
                   },
                   child: Row(
@@ -43,13 +43,13 @@ class _MenuState extends State<Menu> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(height: 40),
+                          const SizedBox(height: 40),
                           CircleAvatar(
-                            child: Icon(Icons.person),
+                            child: const Icon(Icons.person),
                             maxRadius: size.height / 35,
                           ),
-                          SizedBox(height: 10),
-                          Text("Sign In"),
+                          const SizedBox(height: 10),
+                          const Text("Sign In"),
                         ],
                       ),
                     ],
@@ -64,10 +64,10 @@ class _MenuState extends State<Menu> {
                   MaterialPageRoute(builder: (context) => const Chart()),
                 );
               },
-              leading: Icon(Icons.pie_chart_outline, color: Colors.purple),
-              title: Text("Chart"),
+              leading: const Icon(Icons.pie_chart_outline, color: Colors.purple),
+              title: const Text("Chart"),
             ),
-            Divider(
+            const Divider(
               thickness: 1.0,
             ),
             ListTile(
@@ -77,10 +77,10 @@ class _MenuState extends State<Menu> {
                   MaterialPageRoute(builder: (context) => const Category()),
                 );
               },
-              leading: Icon(Icons.category_outlined, color: Colors.red),
-              title: Text("Categories"),
+              leading: const Icon(Icons.category_outlined, color: Colors.red),
+              title: const Text("Categories"),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.add_chart_sharp, color: Colors.indigo),
               title: Text("Export"),
             ),
@@ -92,15 +92,15 @@ class _MenuState extends State<Menu> {
                 );
               },
               leading: Icon(Icons.settings, color: Colors.blue[300]),
-              title: Text("Settings"),
+              title: const Text("Settings"),
             ),
             ListTile(
               leading: Icon(Icons.star_rate_outlined, color: Colors.amber[300]),
-              title: Text("Rate Us"),
+              title: const Text("Rate Us"),
             ),
             ListTile(
               leading: Icon(Icons.info_outline, color: Colors.green[300]),
-              title: Text("About"),
+              title: const Text("About"),
             ),
           ],
         ),
